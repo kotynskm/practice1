@@ -9,11 +9,27 @@ import { ApiService } from './api.service';
 export class AppComponent {
   constructor(private apiService: ApiService) {}
 
-  title = 'practice1';
+  title = 'practice1: property binding vs string interpolation';
+  data = 'this is a string of data';
+  number = 10;
+  isButtonDisabled = true;
+  inputWord = '';
 
   displayArticle() {
     this.apiService
       .callArticleEndpoint()
       .subscribe((data) => console.log(data));
+  }
+
+  displayNumber() {
+    return this.number;
+  }
+
+  displayWord() {
+    this.inputWord = 'Your word is: ' + this.inputWord;
+  }
+
+  getInput(event: Event) {
+    this.inputWord = (<HTMLInputElement>event.target).value;
   }
 }

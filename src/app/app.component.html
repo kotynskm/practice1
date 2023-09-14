@@ -1,3 +1,22 @@
 <app-header></app-header>
-<h1>This is the app component</h1>
+<h1>String Interpolation</h1>
+<h2>{{ title }}</h2>
+<h2>{{ displayNumber() }}</h2>
+
+<h1>Property binding</h1>
+<h3 [innerHTML]="'this text is displayed via property binding'"></h3>
+<button [disabled]="isButtonDisabled">Test Button</button>
+
+<h1>API call with event binding</h1>
 <button (click)="displayArticle()">Click for Article</button>
+
+<h1>Passing data with event binding</h1>
+<label>Enter a Word:</label>
+<input type="text" (input)="getInput($event)" />
+<h2>{{ inputWord }}</h2>
+
+<h1>Two way binding</h1>
+<label>Enter a Word:</label>
+<input type="text" [(ngModel)]="inputWord" />
+<button (click)="displayWord()">Submit</button>
+<h2>{{ inputWord }}</h2>
