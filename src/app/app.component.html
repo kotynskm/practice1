@@ -20,3 +20,14 @@
 <input type="text" [(ngModel)]="inputWord" />
 <button (click)="displayWord()">Submit</button>
 <h2>{{ inputWord }}</h2>
+
+<h1>Exercise 1</h1>
+<p>
+  Create an input for username, username should be passed via event binding to
+  the input and displayed with string interpolation. Button should be disabled
+  if username is an empty string.
+</p>
+<label>Enter a Username:</label>
+<input type="text" (input)="setUsername($event)" />
+<p>{{ username }}</p>
+<button [disabled]="!username" (click)="username = ''">Reset Username</button>

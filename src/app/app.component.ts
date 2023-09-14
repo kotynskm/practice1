@@ -14,6 +14,7 @@ export class AppComponent {
   number = 10;
   isButtonDisabled = true;
   inputWord = '';
+  username = '';
 
   displayArticle() {
     this.apiService
@@ -31,5 +32,9 @@ export class AppComponent {
 
   getInput(event: Event) {
     this.inputWord = (<HTMLInputElement>event.target).value;
+  }
+
+  setUsername(event: Event) {
+    this.username = (<HTMLInputElement>event.target).value;
   }
 }
