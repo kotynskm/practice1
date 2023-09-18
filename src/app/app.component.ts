@@ -15,6 +15,8 @@ export class AppComponent {
   isButtonDisabled = true;
   inputWord = '';
   username = '';
+  displayDetails = false;
+  btnClicks: string[] = [];
 
   displayArticle() {
     this.apiService
@@ -36,5 +38,12 @@ export class AppComponent {
 
   setUsername(event: Event) {
     this.username = (<HTMLInputElement>event.target).value;
+  }
+
+  displayBtn() {
+    this.displayDetails
+      ? (this.displayDetails = false)
+      : (this.displayDetails = true);
+    this.btnClicks.push('Button Clicked');
   }
 }
