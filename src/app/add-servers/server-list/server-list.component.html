@@ -1,0 +1,8 @@
+<div class="container">
+  <ul
+    *ngFor="let server of serverList"
+    [ngClass]="{ server: !server.isBlueprint, blueprint: server.isBlueprint }"
+  >
+    <li>{{ server.name }} : {{ server.content }}</li>
+  </ul>
+</div>

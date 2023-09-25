@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Add a Server or a Server Blueprint</h2>
+  <label>Enter a Server name:</label>
+  <input type="text" [(ngModel)]="serverName" />
+  <label>Enter a Server content:</label>
+  <input type="text" [(ngModel)]="serverContent" />
+  <button (click)="addServer()">Add Server</button>
+  <button (click)="addBlueprint()">Add Blueprint</button>
+</div>
+<app-server-list [serverList]="serverList"></app-server-list>
