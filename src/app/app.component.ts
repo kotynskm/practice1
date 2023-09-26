@@ -17,6 +17,8 @@ export class AppComponent {
   username = '';
   displayDetails = false;
   btnClicks: string[] = [];
+  evenNums: number[] = [];
+  oddNums: number[] = [];
 
   displayArticle() {
     this.apiService
@@ -45,5 +47,13 @@ export class AppComponent {
       ? (this.displayDetails = false)
       : (this.displayDetails = true);
     this.btnClicks.push('Button Clicked');
+  }
+
+  onIntervalFired(number: number) {
+    if (number % 2 === 0) {
+      this.evenNums.push(number);
+    } else {
+      this.oddNums.push(number);
+    }
   }
 }

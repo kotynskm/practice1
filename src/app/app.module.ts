@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { AddServersComponent } from './add-servers/add-servers.component';
 import { ServerListComponent } from './add-servers/server-list/server-list.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './game-control/odd/odd.component';
+import { EvenComponent } from './game-control/even/even.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,9 @@ import { ServerListComponent } from './add-servers/server-list/server-list.compo
     HeaderComponent,
     AddServersComponent,
     ServerListComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],

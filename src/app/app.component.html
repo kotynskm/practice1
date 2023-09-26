@@ -57,3 +57,8 @@
 
 <h1>Exercise 3</h1>
 <app-add-servers></app-add-servers>
+
+<h1>Exercise 4</h1>
+<app-game-control (startInterval)="onIntervalFired($event)"></app-game-control>
+<app-odd *ngFor="let number of oddNums" [number]="number"></app-odd>
+<app-even *ngFor="let number of evenNums" [number]="number"></app-even>
