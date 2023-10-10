@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>Active Users</h3>
+  <ul *ngFor="let user of users; let i = index">
+    <li *ngIf="user.status === 'active'">
+      <app-user [user]="user"></app-user>
+      <button (click)="updateStatus(i, 'inactive')">Set to Inactive</button>
+    </li>
+  </ul>
+  <h3>Inactive Users</h3>
+  <ul *ngFor="let user of users; let i = index">
+    <li *ngIf="user.status === 'inactive'">
+      <app-user [user]="user"></app-user>
+      <button (click)="updateStatus(i, 'active')">Set to Active</button>
+    </li>
+  </ul>
+</div>
