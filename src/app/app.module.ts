@@ -11,6 +11,7 @@ import { OddComponent } from './game-control/odd/odd.component';
 import { EvenComponent } from './game-control/even/even.component';
 import { UserComponent } from './user-list/user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UserListComponent } from './user-list/user-list.component';
     EvenComponent,
     UserComponent,
     UserListComponent,
+    FormComponent,
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],
