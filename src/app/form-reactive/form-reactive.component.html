@@ -1,0 +1,28 @@
+<div class="container">
+  <form class="form" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <label>Enter a project name</label>
+    <input type="text" formControlName="projectName" />
+    <!-- <span
+      *ngIf="
+        !reactiveForm.get('projectName').valid &&
+        reactiveForm.get('projectName').touched
+      "
+      >Please enter a valid project name!</span -->
+    >
+    <label>Enter an email</label>
+    <input type="text" formControlName="email" />
+    <!-- <span
+      *ngIf="
+        !reactiveForm.get('email').valid && reactiveForm.get('email').touched
+      "
+      >Please enter a valid email!</span
+    > -->
+    <label>Select a project status</label>
+    <select formControlName="status">
+      <option>Stable</option>
+      <option>Critical</option>
+      <option>Finished</option>
+    </select>
+    <button type="submti">Submit</button>
+  </form>
+</div>
