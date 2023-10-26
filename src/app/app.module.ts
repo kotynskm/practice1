@@ -13,6 +13,7 @@ import { UserComponent } from './user-list/user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FormComponent } from './form/form.component';
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormReactiveComponent } from './form-reactive/form-reactive.component';
     UserListComponent,
     FormComponent,
     FormReactiveComponent,
+    CounterComponent,
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
